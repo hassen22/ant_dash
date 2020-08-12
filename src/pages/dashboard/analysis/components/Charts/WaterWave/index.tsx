@@ -41,7 +41,6 @@ class WaterWave extends Component<WaterWaveProps> {
   componentDidUpdate(props: WaterWaveProps) {
     const { percent } = this.props;
     if (props.percent !== percent) {
-      // 不加这个会造成绘制缓慢
       this.renderChart('update');
     }
   }

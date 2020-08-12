@@ -2,7 +2,8 @@ import { Tooltip, Tag } from 'antd';
 import { Settings as ProSettings } from '@ant-design/pro-layout';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import React from 'react';
-import { connect, ConnectProps, SelectLang } from 'umi';
+import { connect, ConnectProps } from 'umi';
+import {SelectLang} from './SelectLang'
 import { ConnectState } from '@/models/connect';
 import Avatar from './AvatarDropdown';
 import HeaderSearch from '../HeaderSearch';
@@ -29,7 +30,7 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = (props) => {
     <div className={className}>
       <HeaderSearch
         className={`${styles.action} ${styles.search}`}
-        placeholder="站内搜索"
+        placeholder="Search"
         defaultValue="umi ui"
         options={[
           {
@@ -52,7 +53,7 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = (props) => {
         //   //console.log('input', value);
         // }}
       />
-      <Tooltip title="使用文档">
+      <Tooltip title="documentation">
         <a
           style={{
             color: 'inherit',
@@ -72,7 +73,10 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = (props) => {
           <Tag color={ENVTagColor[REACT_APP_ENV]}>{REACT_APP_ENV}</Tag>
         </span>
       )}
-      <SelectLang className={styles.action} />
+
+      <SelectLang className={styles.action}  />
+      
+
     </div>
   );
 };

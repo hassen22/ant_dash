@@ -7,7 +7,6 @@ import numeral from 'numeral';
 import { ChartCard, MiniArea, MiniBar, MiniProgress, Field } from './Charts';
 import { VisitDataType } from '../data.d';
 import Trend from './Trend';
-import Yuan from '../utils/Yuan';
 import styles from '../style.less';
 
 const topColResponsiveProps = {
@@ -43,7 +42,7 @@ const IntroduceRow = ({ loading, visitData }: { loading: boolean; visitData: Vis
           </Tooltip>
         }
         loading={loading}
-        total={() => <Yuan>126560</Yuan>}
+        total={() => <div>€ 126560</div>}
         footer={
           <Field
             label={
@@ -52,7 +51,7 @@ const IntroduceRow = ({ loading, visitData }: { loading: boolean; visitData: Vis
                 defaultMessage="Daily Sales"
               />
             }
-            value={`￥${numeral(12423).format('0,0')}`}
+            value={`€ ${numeral(12423).format('0,0')}`}
           />
         }
         contentHeight={46}
