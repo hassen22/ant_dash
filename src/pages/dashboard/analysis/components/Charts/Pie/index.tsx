@@ -291,12 +291,12 @@ class Pie extends Component<PieProps, PieState> {
                     backgroundColor: !item.checked ? '#aaa' : item.color,
                   }}
                 />
-                <span className={styles.legendTitle}>{item.x}</span>
+                <span className={styles.legendTitle}>item {i+1}</span>
                 <Divider type="vertical" />
                 <span className={styles.percent}>
                   {`${(Number.isNaN(item.percent) ? 0 : item.percent * 100).toFixed(2)}%`}
                 </span>
-                <span className={styles.value}>{valueFormat ? valueFormat(item.y) : item.y}</span>
+                <span className={styles.value}>{item.y}</span>
               </li>
             ))}
           </ul>

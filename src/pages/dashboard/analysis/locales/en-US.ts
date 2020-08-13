@@ -21,7 +21,7 @@ export default {
   'dashboardandanalysis.analysis.search-users': 'Find users',
   'dashboardandanalysis.analysis.per-capita-search': 'Search by inhabitant',
   'dashboardandanalysis.analysis.online-top-search': 'Top online search',
-  'dashboardandanalysis.analysis.the-proportion-of-sales': 'he proportion of sales',
+  'dashboardandanalysis.analysis.the-proportion-of-sales': 'Sales proportion',
   'dashboardandanalysis.channel.all': 'ALL',
   'dashboardandanalysis.channel.online': 'Online',
   'dashboardandanalysis.channel.stores': 'Stores',

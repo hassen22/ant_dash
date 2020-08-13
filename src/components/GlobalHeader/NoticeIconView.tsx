@@ -126,8 +126,8 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
           this.changeReadState(item as NoticeItem);
         }}
         loading={fetchingNotices}
-        clearText="清空"
-        viewMoreText="查看更多"
+        clearText="Empty"
+        viewMoreText="see more"
         onClear={this.handleNoticeClear}
         onPopupVisibleChange={onNoticeVisibleChange}
         onViewMore={() => message.info('Click on view more')}
@@ -137,22 +137,22 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
           tabKey="notification"
           count={unreadMsg.notification}
           list={noticeData.notification}
-          title="通知"
-          emptyText="你已查看所有通知"
+          title="Notice"
+          emptyText="You have viewed all notifications"
           showViewMore
         />
         <NoticeIcon.Tab
           tabKey="message"
           count={unreadMsg.message}
           list={noticeData.message}
-          title="消息"
-          emptyText="您已读完所有消息"
+          title="news"
+          emptyText="You have read all messages"
           showViewMore
         />
         <NoticeIcon.Tab
           tabKey="event"
-          title="待办"
-          emptyText="你已完成所有待办"
+          title="Upcoming"
+          emptyText="You have completed all to do"
           count={unreadMsg.event}
           list={noticeData.event}
           showViewMore

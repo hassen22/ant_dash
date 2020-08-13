@@ -25,7 +25,12 @@ const columns = [
     ),
     dataIndex: 'keyword',
     key: 'keyword',
-    render: (text: React.ReactNode) => <a href="/">{text}</a>,
+    render: (text: React.ReactNode) => <a href="/">
+      <FormattedMessage
+        id="dashboardandanalysis.table.search-keyword"
+        defaultMessage="Search"
+      />
+    </a>,
   },
   {
     title: <FormattedMessage id="dashboardandanalysis.table.users" defaultMessage="Users" />,

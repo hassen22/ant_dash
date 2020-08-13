@@ -6,6 +6,7 @@ import moment from 'moment';
 import React from 'react';
 import numeral from 'numeral';
 import { VisitDataType } from '../data.d';
+
 import { Bar } from './Charts';
 import styles from '../style.less';
 
@@ -22,6 +23,16 @@ for (let i = 0; i < 7; i += 1) {
 
 type RangePickerValue = RangePickerProps<moment.Moment>['value'];
 
+const saleData : VisitDataType[] =[];
+
+for (let i = 0; i < 12; i += 1) {
+  saleData.push({
+    x: `${i + 1}`,
+    y: Math.floor(Math.random() * 1000) + 200,
+  });
+}
+
+
 const SalesCard = ({
   rangePickerValue,
   salesData,
@@ -30,12 +41,15 @@ const SalesCard = ({
   loading,
   selectDate,
 }: {
+ 
+
   rangePickerValue: RangePickerValue;
   isActive: (key: 'today' | 'week' | 'month' | 'year') => string;
   salesData: VisitDataType[];
   loading: boolean;
   handleRangePickerChange: (dates: RangePickerValue, dateStrings: [string, string]) => void;
   selectDate: (key: 'today' | 'week' | 'month' | 'year') => void;
+  
 }) => (
   <Card loading={loading} bordered={false} bodyStyle={{ padding: 0 }}>
     <div className={styles.salesCard}>
@@ -93,7 +107,7 @@ const SalesCard = ({
                       defaultMessage="Sales Trend"
                     />
                   }
-                  data={salesData}
+                  data={saleData}
                 />
               </div>
             </Col>
@@ -141,7 +155,7 @@ const SalesCard = ({
                       defaultMessage="Visits Trend"
                     />
                   }
-                  data={salesData}
+                  data={saleData}
                 />
               </div>
             </Col>
@@ -174,5 +188,4 @@ const SalesCard = ({
     </div>
   </Card>
 );
-
 export default SalesCard;

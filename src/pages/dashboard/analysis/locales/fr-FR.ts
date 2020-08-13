@@ -4,7 +4,7 @@ export default {
     'dashboardandanalysis.analysis.total-sales': 'Ventes totales',
     'dashboardandanalysis.analysis.day-sales': 'Ventes quotidiennes',
     'dashboardandanalysis.analysis.visits': 'Visites',
-    'dashboardandanalysis.analysis.visits-trend': 'VTendance des visites',
+    'dashboardandanalysis.analysis.visits-trend': 'Tendance des visites',
     'dashboardandanalysis.analysis.visits-ranking': 'Classement des visites',
     'dashboardandanalysis.analysis.day-visits': 'Visites quotidiennes',
     'dashboardandanalysis.analysis.week': 'Changement  WoW',
